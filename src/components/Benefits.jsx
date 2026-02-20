@@ -65,6 +65,7 @@ const Benefits = () => {
           ))}
         </div>
       </div>
+   
     </Section>
   );
 };
