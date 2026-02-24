@@ -3,6 +3,7 @@ import Headings from './Headings'
 import Section from './Section'
 import { check, service1 } from '../assets'
 import { brainwaveServices } from '../constants'
+import Generating from './Generating'
 
 const Services = () => {
   return (
@@ -19,19 +20,24 @@ const Services = () => {
           <div className='relative z-1 max-w-[17rem]  ml-auto'>
             <h4 className='h3 mb-4'>The smartest AI chat app for creators.</h4>
             <p className='body-2 text-n-4 mb-6'>Brainwave is the smartest AI chat app designed specifically for creators. It understands your creative needs and provides intelligent suggestions, making it easier than ever to bring your ideas to life.</p>
-            <p className='body-2 text-n-4'>With Brainwave, you can unleash your creativity and take your projects to new heights. Whether you're a writer, designer, or any type of creator, Brainwave is here to support you every step of the way.</p>    
-            <ul>
-                {brainwaveServices.map((service) => (
-                    <li key={service.id} className='flex items-center mt-6'>
-                        <img src={check} width={24} height={24} alt={service.title} />
-                        <h6 className='body-2 ml-4'>{service.title}</h6>
-                    </li>
+            
+             <ul className="body-2">
+                {brainwaveServices.map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start py-4 border-t border-n-6"
+                  >
+                    <img width={24} height={24} src={check} />
+                    <p className="ml-4">{item}</p>
+                  </li>
                 ))}
-            </ul>
+              </ul>
                 
                 
              
           </div>
+
+          <Generating className="absolute right-4 bottom-4 left-4 border border-n-1/10 lg:left-1/2 lg:right-auto lg:bottom-8 lg:-translate-x-1/2" />
 
            
         </div>
