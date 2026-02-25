@@ -1,9 +1,10 @@
 import React from 'react'
 import Headings from './Headings'
 import Section from './Section'
-import { check, service1 } from '../assets'
+import { check, service1, service2 } from '../assets'
 import { brainwaveServices } from '../constants'
 import Generating from './Generating'
+import PhotoChatMessage from './PhotoChatMessage'
 
 const Services = () => {
   return (
@@ -41,7 +42,21 @@ const Services = () => {
 
            
         </div>
+         <div className='realative z-1 grid gap-5 lg:grid-cols-2'>
+          <div className='relative min-h-[39rem] border border-n-1/10 rounded-3xl overflow-hidden'>
+          <img src={service2} className='w-full h-full object-cover' width={630} height={750} alt='smartest-AI'/>
+          
+          </div>
+           <div className='absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15'>
+            <h4 className='h4 mb-4'>Smartest AI</h4>
+            <p className='body-2 mb-[3rem] text-n-3'>Brianwave is the smartest AI chat app for creators, designed to help you bring your ideas to life with ease and creativity.</p>
+        
+          </div>
+          <PhotoChatMessage/>
+        
         </div>
+        </div>
+       
         </div>
     </Section>
   )
